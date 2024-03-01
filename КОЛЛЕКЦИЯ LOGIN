@@ -1,0 +1,32 @@
+// Test script in Postman for CheckLogin method
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+// Log the response body
+console.log(pm.response.text());
+
+// Extracting accessToken from the response
+pm.environment.set("accessToken", pm.response.json().accessToken);
+
+// Check response time
+pm.test("Response time is less than 200ms", function () {
+    pm.expect(pm.response.responseTime).to.be.below(200);
+});
+
+
+// Test script in Postman for CheckLogin method
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+// Log the response body
+console.log(pm.response.text());
+
+// Extracting accessToken from the response
+pm.environment.set("accessToken", pm.response.json().accessToken);
+
+// Check response time
+pm.test("Response time is less than 200ms", function () {
+    pm.expect(pm.response.responseTime).to.be.below(200);
+});
